@@ -192,9 +192,7 @@ form .flexRow:not(:last-child) {
     width: 480px;
     background: #F8F8F8;
 }
-.mainCardContent {
 
-}
 .cardInfoCnt {
     display: flex;
     justify-content: space-between;
@@ -277,9 +275,7 @@ form .flexRow:not(:last-child) {
     margin: 20px 40px 20px 40px;
     padding: 20px;
 }
-.rightContent {
 
-}
 .text {
     font-style: normal;
     font-weight: normal;
@@ -291,9 +287,6 @@ form .flexRow:not(:last-child) {
 
 .radioContainer {
     display: none;   
-}
-input.search:valid {
-
 }
 input.search:invalid {
     border: 2px solid red;

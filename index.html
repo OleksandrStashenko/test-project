@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/tablet.css">
+  <link rel="stylesheet" href="./css/mobile.css">
+  <link
+    href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900'
+    rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <div class="allPage">
+    <div class="leftBlock">
+      <div class="msi2020">MSI 2020</div>
+      <div class="group17" id="group17">
+        <div class="group15">
+          <h1 class="hey">Hey!</h1>
+          <h2 class="try">Let's try to find a joke for you:</h2>
+          <form class="form">
+            <div class="flexRow">
+              <input type="radio" class="radioBtn" name="jokeOption" id="radio-random" value="1">
+              <label for="radio-random">Random</label>
+            </div>
+            <div class="flexRow">
+              <input type="radio" class="radioBtn" name="jokeOption" id="radio-from-categories" value="2" for="fromCategory" checked>
+              <label for="radio-from-categories">From categories</label>
+            </div>
+            <div class="radioContainer" id="fromCategory">
+              <!-- <button class="btn">Animal</button>
+              <button class="btn">Career</button>
+              <button class="btn btnActive">Celebrity</button>
+              <button class="btn">Dev</button> -->
+            </div>
+            <div class="flexRow">
+              <input type="radio" name="jokeOption" class="radioBtn" id="radio-search" value="3" for="fromSearch">
+              <label for="radio-search">Search</label>
+            </div>
+            <div class="radioContainer" id="fromSearch">
+              <input type="text" class="search" placeholder="Free text search... " minlength = "3" maxlength = "120">
+            </div>
+            <button class="submitBtn" id="submitBtn">Get a joke</button>
+          </form>
+        </div>
+        
+        <!-- <div class="card">
+          <div class="cardActionsCnt">
+            <span class="material-icons iconFavourite">favorite_border</span>
+          </div>
+          <div class="cardContent">
+            <div class="sideCardContent">
+              <div class="iconCnt white">
+                <span class="material-icons iconMessage">message</span>
+              </div>
+            </div>
+            <div class="mainCardContent">
+              <div class="cardLinkCnt">
+                <span class="id textColor">ID:</span> <a class="id" href="#"> XNaAxUduSw6zANDaIEab7A</a>
+                <span class="material-icons linkIcon"> open_in_new</span>
+              </div>
+              <p class="noOne">No One truly knows who's Chuck Norris'
+                real father. No one is biologically strong enough for this. He
+                must've conceived himself.
+              </p>
+              <div class="cardInfoCnt">
+                <p class="lastUpdate">Last Update: 1923 hours ago</p>
+                <button class="btnCelebrity">CELEBRITY</button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <div class="tablet">
+      <button class="openSideBar">
+        <span class="material-icons md-18"> menu </span>
+      </button> 
+      <p class="titleOpen">Favourite</p>
+    </div> 
+    <div class="sideBar">
+      <div class="rightBlock">
+        <div class="sideBarActionsCnt">
+          <button class="closeSideBar">
+            <span class="material-icons">cancel</span>
+          </button>
+          <p class="title">Favourite</p>
+        </div>
+        <!-- <div class="rightCards">
+          <div class="cardActionsCnt">
+            <span class="material-icons iconFavourite">favorite</span>
+          </div>
+          <div class="cardContent">
+            <div class="sideCardContent">
+              <div class="iconCnt grey"> 2
+                <span class="material-icons iconMessage">message</span>
+              </div>
+            </div>
+            <div class="rightContent">
+              <div class="cardLinkCnt">
+                <span class="id textColor">ID:</span> <a class="id" href="#"> XNaAxUduSw6zANDaIEab7A</a>
+                <span class="material-icons linkIcon"> open_in_new</span>
+              </div>
+              <p class="text">No One truly knows who's Chuck Norris'
+                real father. No one is biologically strong enough for this. He
+                must've conceived himself.
+              </p>
+              <div class="cardInfoCnt">
+                <p class="lastUpdate">Last Update: 1923 hours ago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="rightCards">
+          <div class="cardActionsCnt">
+            <span class="material-icons iconFavourite">favorite</span>
+          </div>
+          <div class="cardContent">
+            <div class="sideCardContent">
+              <div class="iconCnt grey">
+                <span class="material-icons iconMessage">message</span>
+              </div>
+            </div>
+            <div class="rightContent">
+              <div class="cardLinkCnt">
+                <span class="id textColor">ID:</span> <a class="id" href="#"> XNaAxUduSw6zANDaIEab7A</a>
+                <span class="material-icons linkIcon"> open_in_new</span>
+              </div>
+              <p class="text">Chuck Norris can put a plane reverse.</p>
+              <div class="cardInfoCnt">
+                <p class="lastUpdate">Last Update: 1923 hours ago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rightCards">
+          <div class="cardActionsCnt">
+            <span class="material-icons iconFavourite">favorite</span>
+          </div>
+          <div class="cardContent">
+            <div class="sideCardContent">
+              <div class="iconCnt grey">
+                <span class="material-icons iconMessage">message</span>
+              </div>
+            </div>
+            <div class="rightContent">
+              <div class="cardLinkCnt">
+                <span class="id textColor">ID:</span> <a class="id" href="#"> XNaAxUduSw6zANDaIEab7A</a>
+                <span class="material-icons linkIcon"> open_in_new</span>
+              </div>
+              <p class="text">Chuck Norris doesn't bench press weight sets,
+                he bench presses FREIGHT TRAINS!</p>
+              <div class="cardInfoCnt">
+                <p class="lastUpdate">Last Update: 1923 hours ago</p>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  
+  <script src="./js/main.js"></script>
+  <script src="./js/tеmplates/card.js"></script>
+  <script src="./js/timeSince.js"></script>
+</body>
+
+</html>
+

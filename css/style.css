@@ -211,7 +211,7 @@ button:focus {
 
 .cardInfoCnt {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .iconCnt {
@@ -258,6 +258,7 @@ button:focus {
 }
 
 .jokeCategories {
+    margin-left: 325px;
     border-radius: 6px;
     background: #FFFFFF;
     width: 67px;

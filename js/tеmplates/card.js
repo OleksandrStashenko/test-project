@@ -5,10 +5,10 @@
  */
 
 const createCard = (joke, isFavorite) => {
-  const since = timeSince(new Date(joke.updated_at)); 
-  
-  return (
-    `<div class="${isFavorite ? "rightCards" : "card"}">
+        const since = timeSince(new Date(joke.updated_at));
+
+        return (
+                `<div class="${isFavorite ? "rightCards" : "card"}">
   <div class="cardActionsCnt"> 
     <span id="${isFavorite ? `${joke.id}-favorite` : joke.id}" class="material-icons iconFavourite" onclick="handleClick(event, '${joke.id}')">${isFavorite ? "favorite" : "favorite_border"}</span> 
   </div> 
@@ -20,13 +20,13 @@ const createCard = (joke, isFavorite) => {
     </div> 
     <div class="mainCardContent"> 
       <div class="cardLinkCnt"> 
-        <span class="id textColor">ID:</span> <a class="id" href="#">${joke.id}</a> 
+        <span class="id textColor">ID:</span> <a class="id" href="${joke.url}">${joke.id}</a> 
         <span class="material-icons linkIcon"> open_in_new</span> 
       </div> 
       <p>${joke.value}</p> 
       <div class="cardInfoCnt"> 
         <p class="lastUpdate">Last update: ${since} ago</p> 
-        <label class="jokeCategories" ${joke.categories && joke.categories.length > 0 ? "" : "style='display: none;'"}>${joke.categories}</label>
+        <label class="jokeCategories" ${joke.categories && joke.categories.length > 0 ? "" : "style='display: none;'"} ${isFavorite ? "style = 'display: none;'" : ""}>${joke.categories}</label>
       </div> 
     </div> 
   </div> 
@@ -50,7 +50,7 @@ const insertCard = (joke, targetNode, isFavorite) => {
  */
 
 const removeCards = () => {
-  const gr17 = document.querySelector('.group17');
+  const gr17 = document.querySelector('.leftContent');
   while (gr17.lastChild.classList && gr17.lastChild.classList.contains('card')) {
     gr17.removeChild(gr17.lastChild);
   }

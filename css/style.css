@@ -1,14 +1,16 @@
-
 * {
-    font-family: Roboto; 
+    font-family: Roboto;
     font-style: normal;
 }
+
 .closeSideBar {
     display: none;
 }
+
 .tablet {
     display: none;
 }
+
 body {
     margin: 0;
 }
@@ -18,15 +20,18 @@ body {
     background: #FFFFFF;
     margin: 0 auto;
 }
+
 .leftBlock {
     flex: 3;
     margin: 0 140px;
     padding-bottom: 140px;
     width: calc(100% - 480px);
 }
-.group15 {
+
+.blockContent {
     margin-top: 57px;
 }
+
 .msi2020 {
     margin-top: 40px;
     font-weight: bold;
@@ -34,6 +39,7 @@ body {
     line-height: 28px;
     color: #333333;
 }
+
 .hey {
     margin: 0;
     font-weight: bold;
@@ -41,6 +47,7 @@ body {
     line-height: 44px;
     color: #333333;
 }
+
 .try {
     margin: 0;
     font-weight: 500;
@@ -48,20 +55,19 @@ body {
     line-height: 44px;
     color: #333333;
 }
-.noOne {
-    
 
+.noOne {
     font-weight: normal;
     font-size: 18px;
     line-height: 26px;
     color: #333333;
 }
+
 .lastUpdate {
     /* width: 128px;
     height: 14px;
     left: 240px;
     top: 701px; */
-    
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -79,16 +85,16 @@ form .flexRow:not(:last-child) {
     margin: 10px 0;
 }
 
-  .flexRow input[type='radio'] {
+.flexRow input[type='radio'] {
     display: none;
-  }
-  
-  .flexRow label {
+}
+
+.flexRow label {
     color: #333333;
     font-weight: normal;
-  }
-  
-  .flexRow label:before {
+}
+
+.flexRow label:before {
     content: " ";
     display: inline-block;
     position: relative;
@@ -99,9 +105,9 @@ form .flexRow:not(:last-child) {
     border-radius: 18px;
     border: 2px solid #ABABAB;
     background-color: transparent;
-  }
-  
-  .flexRow input[type=radio]:checked + label:after {
+}
+
+.flexRow input[type=radio]:checked+label:after {
     border-radius: 11px;
     width: 10px;
     height: 10px;
@@ -111,24 +117,29 @@ form .flexRow:not(:last-child) {
     content: " ";
     display: block;
     background: #333333;
-  }
-  
-  .flexRow input[type=radio]:checked + label:before {
+}
+
+.flexRow input[type=radio]:checked+label:before {
     border-color: #333;
-  }
-  /* //// */
+}
+
 .form {
     margin: 43px 0 0 0;
 }
+
 .radioBtn {
     width: 20px;
     height: 20px;
     margin-right: 10px;
-
     color: #FFFFFF;
     border: 2px solid #ABABAB;
     box-sizing: border-box;
 }
+
+button:focus {
+    outline: none !important;
+}
+
 .btn {
     border: 2px solid #F8F8F8;
     box-sizing: border-box;
@@ -136,7 +147,6 @@ form .flexRow:not(:last-child) {
     background: white;
     margin: 20px 5px 0 5px;
     padding: 5px 10px;
-
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
@@ -144,6 +154,7 @@ form .flexRow:not(:last-child) {
     text-transform: uppercase;
     color: #ABABAB;
 }
+
 .btnActive {
     background: #F8F8F8;
     color: #333333;
@@ -156,39 +167,44 @@ form .flexRow:not(:last-child) {
     padding: 10px 40px;
     background: linear-gradient(92.01deg, #8EA7FF 0%, #7291FF 100%);
     border-radius: 10px;
-    
     font-weight: bold;
     font-size: 16px;
     line-height: 22px;
     color: #ffffff;
 }
-.card {
 
+.card {
     background: #F8F8F8;
     border-radius: 20px;
     margin-top: 40px;
     padding: 40px;
 }
+
 .cardActionsCnt {
     width: 100%;
     display: flex;
     justify-content: flex-end;
 }
+
 .iconFavourite {
     color: #FF6767;
     font-size: 20px !important;
 }
+
 .iconMessage {
     color: #ABABAB;
     font-size: 20px !important;
 }
+
 .cardContent {
     display: flex;
 }
+
 .sideCardContent {
     margin-right: 20px;
 }
-.sideBar{
+
+.sideBar {
     width: 480px;
     background: #F8F8F8;
 }
@@ -214,7 +230,7 @@ form .flexRow:not(:last-child) {
 }
 
 .iconCnt.grey {
-    background:#F8F8F8;
+    background: #F8F8F8;
     border-color: #F8F8F8;
 }
 
@@ -223,28 +239,31 @@ form .flexRow:not(:last-child) {
     display: flex;
     align-items: center;
 }
+
 .linkIcon {
     color: #8EA7FF;
     font-size: 10px !important;
     margin-left: 5px;
 }
+
 .id {
     font-size: 14px;
     line-height: 14px;
     font-weight: 500;
     color: #8EA7FF;
 }
+
 .textColor {
-  color: #ABABAB;
+    color: #ABABAB;
 }
+
 .jokeCategories {
     border-radius: 6px;
     background: #FFFFFF;
-    width: 107px;
+    width: 67px;
     height: 12px;
-
     text-align: center;
-    padding: 6px;
+    padding: 6px 10px;
     font-weight: 500;
     font-size: 10px;
     line-height: 14px;
@@ -253,21 +272,22 @@ form .flexRow:not(:last-child) {
     color: #333333;
 }
 
-
 .rightBlock {
     flex: 2;
     background: #F8F8F8;
 }
-.title {   
+
+.title {
     margin: 40px 0 0 40px;
-    
     font-weight: 500;
     font-size: 20px;
-    line-height: 28px;    
+    line-height: 28px;
     color: #ABABAB;
 }
+
 .rightCards {
-    background: #F8F8F8;;
+    background: #FFFFFF;
+    ;
     border: 1px solid #F8F8F8;
     box-sizing: border-box;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -279,19 +299,22 @@ form .flexRow:not(:last-child) {
 .text {
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;    
+    font-size: 14px;
     line-height: 20px;
     color: #333333;
-    /* padding: 5px 20px 5px 20px; */
 }
 
 .radioContainer {
-    display: none;   
+    display: none;
 }
+
 input.search:invalid {
     border: 2px solid red;
 }
+
 .search {
+    font-size: 16px;
+    padding: 10px 9px;
     width: 680px;
     height: 42px;
     border: 2px solid #333333;
@@ -299,6 +322,7 @@ input.search:invalid {
     border-radius: 10px;
     margin-top: 10px;
 }
+
 ::placeholder {
     font-weight: normal;
     font-size: 16px;
@@ -307,4 +331,4 @@ input.search:invalid {
     width: 127px;
     height: 22px;
     padding: 10px 0 10px 15px;
-  }
+}

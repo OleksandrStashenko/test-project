@@ -1,6 +1,6 @@
 @media (max-width: 834px) {
-    .material-icons.md-18 { 
-        font-size: 18px; 
+    .material-icons.md-18 {
+        font-size: 18px;
     }
     .openSideBar {
         border-radius: 30px;
@@ -13,9 +13,8 @@
         background: #333333;
         color: white;
         vertical-align: middle;
-        
     }
-    .titleOpen{
+    .titleOpen {
         font-weight: 500;
         font-size: 20px;
         line-height: 28px;
@@ -26,8 +25,8 @@
         vertical-align: middle;
     }
     .title {
-        background:#F8F8F8;
-        margin-top: 0px;
+        background: #F8F8F8;
+        margin-top: 40px;
         margin-left: 10px;
     }
     .sideBar {
@@ -43,7 +42,7 @@
         margin-left: auto;
         width: 480px;
         height: 100%;
-        background:#F8F8F8
+        background: #F8F8F8
     }
     .tablet {
         position: absolute;
@@ -61,6 +60,7 @@
         justify-content: flex-end;
     }
     .closeSideBar {
+        margin-top: 40px;
         border-radius: 30px;
         height: 24px;
         width: 24px;
@@ -68,5 +68,8 @@
         border: none;
         cursor: pointer;
         display: inline-block
+    }
+    .search {
+        width: 754px;
     }
 }

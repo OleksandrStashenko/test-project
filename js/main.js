@@ -201,7 +201,6 @@ window.onload = async function() {
 }
 
 const handleClick = (event, jokeId) => {
-    console.log(event);
     const joke = currentJokes.find(i => i.id === jokeId)
 
     // Get existing favorite jokes

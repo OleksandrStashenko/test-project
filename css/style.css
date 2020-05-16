@@ -314,10 +314,6 @@ button:focus {
     display: none;
 }
 
-input.search:invalid {
-    border: 2px solid red;
-}
-
 .search {
     font-size: 16px;
     padding: 10px 9px;

@@ -81,7 +81,9 @@ const renderFavoriteJokes = () => {
   storageJokes = storageJokes && JSON.parse(storageJokes);
   const cnt = document.querySelector('.rightBlock');
 
-  storageJokes.forEach((joke) => insertCard(joke, cnt, true));
+  if (storageJokes) {
+    storageJokes.forEach((joke) => insertCard(joke, cnt, true));
+  }
 };
 
 

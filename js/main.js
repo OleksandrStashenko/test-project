@@ -1,5 +1,5 @@
-let currentJokes = []
-let radioValue = null
+let currentJokes = [];
+let radioValue = null;
 
 const showRadioContainer = () => {
     // Hide all containers
@@ -83,9 +83,7 @@ const renderFavoriteJokes = () => {
     storageJokes = storageJokes && JSON.parse(storageJokes);
     const cnt = document.querySelector('.rightBlock');
 
-    storageJokes && storageJokes.forEach((joke) => {
-        insertCard(joke, cnt, true);
-    });
+    storageJokes.forEach((joke) => insertCard(joke, cnt, true));
 };
 
 
@@ -113,14 +111,14 @@ window.onload = async function() {
     const openSideBar = document.querySelector('.openSideBar')
     const body = document.querySelector('body')
     window.addEventListener('resize', () => {
-        if (window.innerWidth <= 834) {
+        if (window.innerWidth <= 1024) {
             sideBar.style.display = 'none';
         } else {
             sideBar.style.display = 'block';
         }
     })
 
-    if (window.innerWidth <= 834) {
+    if (window.innerWidth <= 1024) {
         sideBar.style.display = 'none';
     } else {
         sideBar.style.display = 'block';
@@ -154,6 +152,9 @@ window.onload = async function() {
         removeCards();
         const joke = await getJoke(Number(radioValue), selectedCategory, query);
         if (Array.isArray(joke.result)) {
+            if (joke.result.length === 0) {
+                console.log('empty array'); // todo
+            }
             joke.result && joke.result.forEach((j) => {
                 appendCard(j);
             });

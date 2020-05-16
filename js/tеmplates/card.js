@@ -50,9 +50,9 @@ const insertCard = (joke, targetNode, isFavorite) => {
  */
 
 const removeCards = () => {
-  const gr17 = document.querySelector('.leftContent');
-  while (gr17.lastChild.classList && gr17.lastChild.classList.contains('card')) {
-    gr17.removeChild(gr17.lastChild);
+  const leftContent = document.querySelector('.leftContent');
+  while (leftContent.lastChild.classList && leftContent.lastChild.classList.contains('card')) {
+    leftContent.removeChild(leftContent.lastChild);
   }
 };
 

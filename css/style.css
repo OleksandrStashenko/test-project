@@ -1,6 +1,9 @@
-* {
-    font-family: Roboto;
-    font-style: normal;
+html {
+    height: 100%;
+}
+
+.material-icons.md-18 {
+    font-size: 18px;
 }
 
 .closeSideBar {
@@ -13,17 +16,21 @@
 
 body {
     margin: 0;
+    height: 100%;
+    font-family: Roboto;
+    font-style: normal;
 }
 
 .allPage {
     display: flex;
     background: #FFFFFF;
     margin: 0 auto;
+    min-height: 100%;
 }
 
 .leftBlock {
     flex: 3;
-    margin: 0 140px;
+    margin: 0 10%;
     padding-bottom: 140px;
     width: calc(100% - 480px);
 }
@@ -64,10 +71,6 @@ body {
 }
 
 .lastUpdate {
-    /* width: 128px;
-    height: 14px;
-    left: 240px;
-    top: 701px; */
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -114,7 +117,7 @@ form .flexRow:not(:last-child) {
     position: absolute;
     top: 11px;
     left: 12px;
-    content: " ";
+    content: "";
     display: block;
     background: #333333;
 }
@@ -137,7 +140,7 @@ form .flexRow:not(:last-child) {
 }
 
 button:focus {
-    outline: none !important;
+    outline: none;
 }
 
 .btn {
@@ -188,12 +191,12 @@ button:focus {
 
 .iconFavourite {
     color: #FF6767;
-    font-size: 20px !important;
+    font-size: 20px;
 }
 
 .iconMessage {
     color: #ABABAB;
-    font-size: 20px !important;
+    font-size: 20px;
 }
 
 .cardContent {
@@ -211,7 +214,11 @@ button:focus {
 
 .cardInfoCnt {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
+}
+
+.mainCardContent {
+    flex-grow: 1;
 }
 
 .iconCnt {
@@ -242,7 +249,7 @@ button:focus {
 
 .linkIcon {
     color: #8EA7FF;
-    font-size: 10px !important;
+    font-size: 10px!important;
     margin-left: 5px;
 }
 
@@ -258,7 +265,6 @@ button:focus {
 }
 
 .jokeCategories {
-    margin-left: 325px;
     border-radius: 6px;
     background: #FFFFFF;
     width: 67px;
@@ -288,7 +294,6 @@ button:focus {
 
 .rightCards {
     background: #FFFFFF;
-    ;
     border: 1px solid #F8F8F8;
     box-sizing: border-box;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -316,7 +321,7 @@ input.search:invalid {
 .search {
     font-size: 16px;
     padding: 10px 9px;
-    width: 680px;
+    width: 100%;
     height: 42px;
     border: 2px solid #333333;
     box-sizing: border-box;

@@ -1,4 +1,4 @@
-@media (max-width: 834px) {
+@media (max-width: 1024px) {
     .material-icons.md-18 {
         font-size: 18px;
     }
@@ -40,9 +40,10 @@
     .rightBlock {
         display: block;
         margin-left: auto;
-        width: 480px;
+        width: 57%;
         height: 100%;
-        background: #F8F8F8
+        background: #F8F8F8;
+        max-width: 100%;
     }
     .tablet {
         position: absolute;
@@ -68,8 +69,5 @@
         border: none;
         cursor: pointer;
         display: inline-block
-    }
-    .search {
-        width: 754px;
     }
 }

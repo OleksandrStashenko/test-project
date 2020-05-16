@@ -77,6 +77,11 @@ const appendCard = joke => {
     insertCard(joke, cnt);
 }
 
+const appendNotFoundMessage = () => {
+    const cnt = document.querySelector('.leftContent');
+    insertNotFoundMessage(cnt);
+};
+
 const renderFavoriteJokes = () => {
     // Get existing favorite jokes
     let storageJokes = localStorage.getItem('jokes');
@@ -153,7 +158,7 @@ window.onload = async function() {
         const joke = await getJoke(Number(radioValue), selectedCategory, query);
         if (Array.isArray(joke.result)) {
             if (joke.result.length === 0) {
-                console.log('empty array'); // todo
+                appendNotFoundMessage();
             }
             joke.result && joke.result.forEach((j) => {
                 appendCard(j);

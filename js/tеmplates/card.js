@@ -1,7 +1,7 @@
 /**
- * Creates HTML text template.
+ * Creates HTML text template for card.
  * @param {Object} joke - joke to display
- * @returns {string} - HTML text remplate
+ * @returns {string} - HTML text template
  */
 
 const createCard = (joke, isFavorite) => {
@@ -35,6 +35,21 @@ const createCard = (joke, isFavorite) => {
 };
 
 /**
+ * Creates node with not found message.
+ * @returns {HTMLElement} - node with not found message
+ */
+
+const createNotFoundMessageNode = () => {
+  const div = document.createElement('div');
+  div.classList.add('card');
+  const h2 = document.createElement('h2');
+  h2.style = 'text-align: center;'
+  h2.innerHTML = 'Jokes Not Found';
+  div.appendChild(h2);
+  return div;
+};
+
+/**
  * Inserts card to a target node.
  * @param {Object} joke - joke to display
  * @param {HTMLElement} targetNode - node to insert
@@ -43,6 +58,15 @@ const createCard = (joke, isFavorite) => {
 
 const insertCard = (joke, targetNode, isFavorite) => {
   targetNode.insertAdjacentHTML('beforeend', createCard(joke, isFavorite));
+};
+
+/**
+ * Inserts not found message to a target node.
+ * @param {HTMLElement} targetNode - node to insert
+ */
+
+const insertNotFoundMessage = (targetNode) => {
+  targetNode.appendChild(createNotFoundMessageNode());
 };
 
 /**

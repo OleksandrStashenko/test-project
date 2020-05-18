@@ -6,14 +6,14 @@ let radioValue = null;
 
 const showRadioContainer = () => {
   // Hide all containers
-  const radioContainers = document.querySelectorAll('.radioContainer');
+  const radioContainers = document.querySelectorAll('.radio-container');
   radioContainers.forEach((radioContainer) => {
     // eslint-disable-next-line no-param-reassign
     radioContainer.style.display = 'none';
   });
 
   // Get attribute `for` from checked radio button
-  const radioButtons = document.querySelectorAll('form.form .flexRow .radioBtn');
+  const radioButtons = document.querySelectorAll('form.form .flex-row .radio-btn');
   radioButtons.forEach((radioButton) => {
     if (radioButton.value === radioValue) {
       const forAttr = radioButton.getAttribute('for');
@@ -66,12 +66,12 @@ const getJoke = async (radioOption, category, query) => {
 };
 
 const appendCard = (joke) => {
-  const cnt = document.querySelector('.leftContent');
+  const cnt = document.querySelector('.left-content');
   insertCard(joke, cnt);
 };
 
 const appendNotFoundMessage = () => {
-  const cnt = document.querySelector('.leftContent');
+  const cnt = document.querySelector('.left-content');
   insertNotFoundMessage(cnt);
 };
 
@@ -79,7 +79,7 @@ const renderFavoriteJokes = () => {
   // Get existing favorite jokes
   let storageJokes = localStorage.getItem('jokes');
   storageJokes = storageJokes && JSON.parse(storageJokes);
-  const cnt = document.querySelector('.rightBlock');
+  const cnt = document.querySelector('.right-block');
 
   if (storageJokes) {
     storageJokes.forEach((joke) => insertCard(joke, cnt, true));
@@ -88,10 +88,10 @@ const renderFavoriteJokes = () => {
 
 
 window.onload = async () => {
-  const radioButtons = document.querySelectorAll('form.form .flexRow .radioBtn');
+  const radioButtons = document.querySelectorAll('form.form .flex-row .radio-btn');
 
   // Init `radioValue`
-  radioValue = document.querySelector('form.form .flexRow .radioBtn:checked').value;
+  radioValue = document.querySelector('form.form .flex-row .radio-btn:checked').value;
 
   // Listen radio buttons change event
   radioButtons.forEach((radioButton) => {
@@ -107,8 +107,8 @@ window.onload = async () => {
   renderFavoriteJokes();
 
   // EventListener for open and close
-  const sideBar = document.querySelector('.sideBar');
-  const openSideBar = document.querySelector('.openSideBar');
+  const sideBar = document.querySelector('.side-bar');
+  const openSideBar = document.querySelector('.open-side-bar');
   const body = document.querySelector('body');
   window.addEventListener('resize', () => {
     if (window.innerWidth <= 1024) {
@@ -126,12 +126,11 @@ window.onload = async () => {
 
   openSideBar.addEventListener('click', () => {
     if (sideBar.style.display === 'none') {
-      body.style.overflow = 'hidden';
       sideBar.style.display = 'block';
     }
   });
 
-  const closeSideBar = document.querySelector('.closeSideBar');
+  const closeSideBar = document.querySelector('.close-side-bar');
   closeSideBar.addEventListener('click', () => {
     if (sideBar.style.display === 'block') {
       body.style.overflow = 'auto';
@@ -145,7 +144,7 @@ window.onload = async () => {
   const getForm = document.querySelector('.form');
   getForm.addEventListener('submit', async (event) => {
     event.preventDefault();
-    const selectedCategory = document.querySelector('.btnActive').innerHTML.toLowerCase();
+    const selectedCategory = document.querySelector('.btn-active').innerHTML.toLowerCase();
     const query = document.querySelector('.search').value;
 
     removeCards();
@@ -183,17 +182,17 @@ window.onload = async () => {
     button.classList.add('btn');
     button.innerHTML = category.toUpperCase();
     if (index === 0) {
-      button.classList.add('btnActive');
+      button.classList.add('btn-active');
     }
     button.addEventListener('click', (e) => {
       e.preventDefault();
-      const activeButton = document.querySelector('.btnActive');
-      activeButton.classList.remove('btnActive');
-      button.classList.add('btnActive');
+      const activeButton = document.querySelector('.btn-active');
+      activeButton.classList.remove('btn-active');
+      button.classList.add('btn-active');
     });
     return button;
   });
-  const categoriesContainer = document.querySelector('#fromCategory');
+  const categoriesContainer = document.querySelector('#from-category');
   categoriesContainer.append(...buttons);
 };
 // eslint-disable-next-line no-unused-vars
@@ -224,7 +223,7 @@ const handleClick = (event, jokeId) => {
     }
 
     // Render favorite joke
-    const cnt = document.querySelector('.rightBlock');
+    const cnt = document.querySelector('.right-block');
     insertCard(joke, cnt, true);
   } else {
     const newJokes = storageJokes.filter((item) => item.id !== jokeId);

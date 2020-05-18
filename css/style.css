@@ -1,12 +1,13 @@
 html {
     height: 100%;
+    cursor: default;
 }
 
 .material-icons.md-18 {
     font-size: 18px;
 }
 
-.closeSideBar {
+.close-side-bar {
     display: none;
 }
 
@@ -21,25 +22,25 @@ body {
     font-style: normal;
 }
 
-.allPage {
+.all-page {
     display: flex;
     background: #FFFFFF;
     margin: 0 auto;
     min-height: 100%;
 }
 
-.leftBlock {
+.left-block {
     flex: 3;
     margin: 0 10%;
     padding-bottom: 140px;
     width: calc(100% - 480px);
 }
 
-.blockContent {
+.block-content {
     margin-top: 57px;
 }
 
-.msi2020 {
+.msi-2020 {
     margin-top: 40px;
     font-weight: bold;
     font-size: 20px;
@@ -63,14 +64,14 @@ body {
     color: #333333;
 }
 
-.noOne {
+.no-one {
     font-weight: normal;
     font-size: 18px;
     line-height: 26px;
     color: #333333;
 }
 
-.lastUpdate {
+.last-update {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -79,25 +80,25 @@ body {
     color: #ABABAB;
 }
 
-.flexRow {
+.flex-row {
     position: relative;
     padding: 0 6px;
 }
 
-form .flexRow:not(:last-child) {
+form .flex-row:not(:last-child) {
     margin: 10px 0;
 }
 
-.flexRow input[type='radio'] {
+.flex-row input[type='radio'] {
     display: none;
 }
 
-.flexRow label {
+.flex-row label {
     color: #333333;
     font-weight: normal;
 }
 
-.flexRow label:before {
+.flex-row label:before {
     content: " ";
     display: inline-block;
     position: relative;
@@ -110,7 +111,7 @@ form .flexRow:not(:last-child) {
     background-color: transparent;
 }
 
-.flexRow input[type=radio]:checked+label:after {
+.flex-row input[type=radio]:checked+label:after {
     border-radius: 11px;
     width: 10px;
     height: 10px;
@@ -122,7 +123,7 @@ form .flexRow:not(:last-child) {
     background: #333333;
 }
 
-.flexRow input[type=radio]:checked+label:before {
+.flex-row input[type=radio]:checked+label:before {
     border-color: #333;
 }
 
@@ -130,7 +131,7 @@ form .flexRow:not(:last-child) {
     margin: 43px 0 0 0;
 }
 
-.radioBtn {
+.radio-btn {
     width: 20px;
     height: 20px;
     margin-right: 10px;
@@ -143,7 +144,12 @@ button:focus {
     outline: none;
 }
 
+label {
+    cursor: pointer;
+}
+
 .btn {
+    cursor: pointer;
     border: 2px solid #F8F8F8;
     box-sizing: border-box;
     border-radius: 6px;
@@ -158,12 +164,12 @@ button:focus {
     color: #ABABAB;
 }
 
-.btnActive {
+.btn-active {
     background: #F8F8F8;
     color: #333333;
 }
 
-.submitBtn {
+.submit-btn {
     border: 2px solid #F8F8F8;
     box-sizing: border-box;
     margin: 23px 5px 0 5px;
@@ -174,6 +180,7 @@ button:focus {
     font-size: 16px;
     line-height: 22px;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .card {
@@ -183,45 +190,47 @@ button:focus {
     padding: 40px;
 }
 
-.cardActionsCnt {
+.card-actions-cnt {
     width: 100%;
     display: flex;
     justify-content: flex-end;
 }
 
-.iconFavourite {
+.icon-favourite {
     color: #FF6767;
     font-size: 20px;
+    cursor: pointer;
 }
 
-.iconMessage {
+.icon-message {
     color: #ABABAB;
     font-size: 20px;
 }
 
-.cardContent {
+.card-content {
     display: flex;
 }
 
-.sideCardContent {
+.side-card-content {
     margin-right: 20px;
 }
 
-.sideBar {
+.side-bar {
     width: 480px;
     background: #F8F8F8;
+    height: 100%;
 }
 
-.cardInfoCnt {
+.card-info-cnt {
     display: flex;
     justify-content: space-between;
 }
 
-.mainCardContent {
+.main-card-content {
     flex-grow: 1;
 }
 
-.iconCnt {
+.icon-cnt {
     width: 40px;
     height: 40px;
     border: 1px solid;
@@ -231,23 +240,23 @@ button:focus {
     align-items: center;
 }
 
-.iconCnt.white {
+.icon-cnt.white {
     background: #fff;
     border-color: #fff;
 }
 
-.iconCnt.grey {
+.icon-cnt.grey {
     background: #F8F8F8;
     border-color: #F8F8F8;
 }
 
-.cardLinkCnt {
+.card-link-cnt {
     flex-wrap: wrap;
     display: flex;
     align-items: center;
 }
 
-.linkIcon {
+.link-icon {
     color: #8EA7FF;
     font-size: 10px!important;
     margin-left: 5px;
@@ -260,11 +269,11 @@ button:focus {
     color: #8EA7FF;
 }
 
-.textColor {
+.text-color {
     color: #ABABAB;
 }
 
-.jokeCategories {
+.joke-categories {
     border-radius: 6px;
     background: #FFFFFF;
     width: 67px;
@@ -279,9 +288,10 @@ button:focus {
     color: #333333;
 }
 
-.rightBlock {
+.right-block {
     flex: 2;
     background: #F8F8F8;
+    overflow: auto;
 }
 
 .title {
@@ -292,7 +302,7 @@ button:focus {
     color: #ABABAB;
 }
 
-.rightCards {
+.right-cards {
     background: #FFFFFF;
     border: 1px solid #F8F8F8;
     box-sizing: border-box;
@@ -310,7 +320,7 @@ button:focus {
     color: #333333;
 }
 
-.radioContainer {
+.radio-container {
     display: none;
 }
 

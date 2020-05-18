@@ -2,7 +2,7 @@
     .material-icons.md-18 {
         font-size: 18px;
     }
-    .openSideBar {
+    .open-side-bar {
         border-radius: 30px;
         height: 24px;
         width: 24px;
@@ -14,7 +14,7 @@
         color: white;
         vertical-align: middle;
     }
-    .titleOpen {
+    .title-open {
         font-weight: 500;
         font-size: 20px;
         line-height: 28px;
@@ -29,7 +29,7 @@
         margin-top: 40px;
         margin-left: 10px;
     }
-    .sideBar {
+    .side-bar {
         display: none;
         position: absolute;
         right: 0;
@@ -37,7 +37,7 @@
         height: 100%;
         background: rgba(0, 0, 0, 0.3);
     }
-    .rightBlock {
+    .right-block {
         display: block;
         margin-left: auto;
         width: 57%;
@@ -51,16 +51,16 @@
         display: block;
         margin: 40px 40px 0 0;
     }
-    .leftBlock {
+    .left-block {
         margin: 0 40px;
     }
-    .sideBarActionsCnt {
+    .side-bar-actions-cnt {
         margin: 0 40px;
         align-items: center;
         display: flex;
         justify-content: flex-end;
     }
-    .closeSideBar {
+    .close-side-bar {
         margin-top: 40px;
         border-radius: 30px;
         height: 24px;

@@ -218,7 +218,6 @@ label {
 .side-bar {
     width: 480px;
     background: #F8F8F8;
-    height: 100%;
 }
 
 .card-info-cnt {
@@ -286,6 +285,7 @@ label {
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #333333;
+    cursor: default;
 }
 
 .right-block {

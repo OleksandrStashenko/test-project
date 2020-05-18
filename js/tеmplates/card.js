@@ -53,6 +53,21 @@ const createNotFoundMessageNode = () => {
 };
 
 /**
+ * Creates node with no favorite jokes message.
+ * @returns {HTMLElement} - node with not found message
+ */
+
+const createNoFavoriteNode = () => {
+  const div = document.createElement('div');
+  div.classList.add('right-cards');
+  const h4 = document.createElement('h4');
+  h4.style = 'text-align: center; color: #ABABAB; font-weight: normal;';
+  h4.innerHTML = 'No Favorite Jokes yet';
+  div.appendChild(h4);
+  return div;
+};
+
+/**
  * Inserts card to a target node.
  * @param {Object} joke - joke to display
  * @param {HTMLElement} targetNode - node to insert
@@ -72,6 +87,16 @@ const insertCard = (joke, targetNode, isFavorite) => {
 // eslint-disable-next-line no-unused-vars
 const insertNotFoundMessage = (targetNode) => {
   targetNode.appendChild(createNotFoundMessageNode());
+};
+
+/**
+ * Inserts no favorite jokes message to a target node.
+ * @param {HTMLElement} targetNode - node to insert
+ */
+
+// eslint-disable-next-line no-unused-vars
+const insertNoFavoriteJokesMessage = (targetNode) => {
+  targetNode.appendChild(createNoFavoriteNode());
 };
 
 /**

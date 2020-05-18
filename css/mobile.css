@@ -55,7 +55,7 @@
     }
     .left-block {
         margin: 0 20px;
-        width: 380px;
+        width: 100%;
     }
     .side-bar-actions-cnt {
         margin: 0 40px 40px 40px;

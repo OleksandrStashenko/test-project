@@ -1,5 +1,6 @@
 /* eslint-env browser */
-/* global insertCard, insertNotFoundMessage, removeCards, removeFavoriteCards */
+/* global insertCard, insertNotFoundMessage,
+removeCards, removeFavoriteCards insertNoFavoriteJokesMessage */
 
 let currentJokes = [];
 let radioValue = null;
@@ -81,8 +82,10 @@ const renderFavoriteJokes = () => {
   storageJokes = storageJokes && JSON.parse(storageJokes);
   const cnt = document.querySelector('.right-block');
 
-  if (storageJokes) {
+  if (storageJokes && storageJokes.length) {
     storageJokes.forEach((joke) => insertCard(joke, cnt, true));
+  } else {
+    insertNoFavoriteJokesMessage(cnt);
   }
 };
 
@@ -127,6 +130,7 @@ window.onload = async () => {
   openSideBar.addEventListener('click', () => {
     if (sideBar.style.display === 'none') {
       sideBar.style.display = 'block';
+      body.style.overflow = 'hidden';
     }
   });
 
@@ -223,8 +227,8 @@ const handleClick = (event, jokeId) => {
     }
 
     // Render favorite joke
-    const cnt = document.querySelector('.right-block');
-    insertCard(joke, cnt, true);
+    removeFavoriteCards();
+    renderFavoriteJokes();
   } else {
     const newJokes = storageJokes.filter((item) => item.id !== jokeId);
     localStorage.setItem('jokes', JSON.stringify(newJokes));
